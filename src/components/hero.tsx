@@ -19,10 +19,12 @@ export default function Hero() {
         quality={100}
         className="z-[-1] brightness-50 blur-sm"
       /> */}
-      <Avatar className="w-32 h-32 shadow-xl">
-        <AvatarImage src="https://github.com/shadcn.png" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
+      <div className="rounded-full w-36 h-36 bg-zinc-900 flex items-center justify-center drop-shadow-lg hover:drop-shadow-2xl">
+        <Avatar className="w-32 h-32">
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+      </div>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-widest lg:text-5xl pt-8">
         HELLO, I'M YUVI !
       </h1>
