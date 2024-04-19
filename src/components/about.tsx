@@ -23,7 +23,7 @@ export default function About() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-48">
         <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
+          <Card className="hover:drop-shadow-2xl">
             <CardHeader>
               <CardTitle className="font-bold tracking-wider text-center hover:text-green-500">
                 Site Reliability Engineer
@@ -67,7 +67,7 @@ export default function About() {
           </Card>
         </div>
         <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
+          <Card className="hover:drop-shadow-2xl">
             <CardHeader>
               <CardTitle className="font-bold tracking-wider text-center hover:text-green-500">
                 Technical Analyst Cloud
@@ -110,7 +110,7 @@ export default function About() {
           </Card>
         </div>
         <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
+          <Card className="hover:drop-shadow-2xl">
             <CardHeader>
               <CardTitle className="font-bold tracking-wider text-center hover:text-green-500">
                 Software Engineer

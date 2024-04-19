@@ -8,13 +8,12 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SiLinuxfoundation } from "react-icons/si";
-import { Target } from "lucide-react";
 import { VscAzure } from "react-icons/vsc";
 
 export default function Certifications() {
   return (
     <div
-      id="about"
+      id="certifications"
       className="min-h-screen flex flex-col items-center px-4 py-16 bg-sky-400"
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest mx-96 mt-8 lg:text-5xl pt-8">
