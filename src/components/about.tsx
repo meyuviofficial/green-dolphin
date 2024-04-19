@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Label } from "@radix-ui/react-dropdown-menu";
 
 export default function About() {
   return (

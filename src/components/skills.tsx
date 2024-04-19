@@ -8,6 +8,7 @@ import {
   SiAzurefunctions,
   SiAzurepipelines,
   SiGithubactions,
+  SiHelm,
   SiKubernetes,
   SiPacker,
   SiPowershell,
@@ -15,7 +16,7 @@ import {
   SiTerraform,
 } from "react-icons/si";
 import { LiaLinux } from "react-icons/lia";
-import { DiAws, DiTerminal, DiWindows } from "react-icons/di";
+import { DiAws, DiDocker, DiTerminal, DiWindows } from "react-icons/di";
 import { ShellIcon } from "lucide-react";
 import { VscAzure } from "react-icons/vsc";
 export default function Skills() {
@@ -45,10 +46,7 @@ export default function Skills() {
           <SiTerraform className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
         </div>
         <div className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center drop-shadow-xl hover:drop-shadow-2xl hover:bg-red-200">
-          <SiGithubactions
-            className="w-24 h-24 p-4"
-            style={{ color: "#f87171" }}
-          />
+          <FaDocker className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
         </div>
         <div className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center drop-shadow-xl hover:drop-shadow-2xl hover:bg-red-200">
           <SiAnsible className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
@@ -69,7 +67,7 @@ export default function Skills() {
           />
         </div>
         <div className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center drop-shadow-xl hover:drop-shadow-2xl hover:bg-red-200">
-          <FaDocker className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
+          <SiHelm className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
         </div>
         <div className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center drop-shadow-xl hover:drop-shadow-2xl hover:bg-red-200">
           <LiaLinux className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
