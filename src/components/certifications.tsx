@@ -20,7 +20,10 @@ export default function Certifications() {
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest mx-96 mt-8 lg:text-5xl pt-8">
         CERTIFICATIONS
       </h1>
-      <p className="text-md leading-relaxed mb-6 tracking-wide w-2/5 pt-4"></p>
+      <p className="text-md leading-relaxed mb-6 tracking-wide w-2/5 pt-4 text-center">
+        Certifications are very hard to obtain and good to flex. Here are some
+        !!
+      </p>
       <div className="grid grid-cols-1 auto-rows-max md:grid-cols-3 gap-8 px-48 min-h-max">
         <div>
           <Card className="drop-shadow-lg hover:drop-shadow-2xl">

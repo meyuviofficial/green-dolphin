@@ -7,12 +7,10 @@ import {
   SiAzuredevops,
   SiAzurefunctions,
   SiAzurepipelines,
-  SiGithubactions,
   SiHelm,
   SiKubernetes,
   SiPacker,
   SiPowershell,
-  SiShell,
   SiTerraform,
 } from "react-icons/si";
 import { LiaLinux } from "react-icons/lia";
