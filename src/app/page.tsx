@@ -1,10 +1,13 @@
 import Hero from "@/components/hero";
-import Image from "next/image";
+import About from "@/components/about";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <div className="grid grid-flow-row">
+        <Hero />
+        <About />
+      </div>
     </main>
   );
 }
