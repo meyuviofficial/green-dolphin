@@ -38,19 +38,19 @@ export default function About() {
             <CardContent>
               <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                 <li>
-                  Developed and managed an enterprise grade solution
-                  ("Kubernetes as a Service") for Shell using EKS and AKS which
-                  involves key features like backup and recovery, autoscaling,
-                  monitoring, security, networking and storage.
+                  Developed and managed an enterprise grade solution (Kubernetes
+                  as a Service) for Shell using EKS and AKS which involves key
+                  features like backup and recovery, autoscaling, monitoring,
+                  security, networking and storage.
                 </li>
                 <li>
-                  Built "Golden Images" for Windows and Linux using packer to
+                  Built Golden Images for Windows and Linux using packer to
                   provide compliant images right out of the box for the platform
                   users.
                 </li>
                 <li>
-                  Designed and implemented a "Cloud Agnostic" backup solution
-                  for Kubernetes that involves automated backup and restore,
+                  Designed and implemented a Cloud Agnostic backup solution for
+                  Kubernetes that involves automated backup and restore,
                   disaster recovery and reporting.
                 </li>
                 <li>
@@ -125,10 +125,10 @@ export default function About() {
             <CardContent>
               <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                 <li>
-                  Built an Enterprise Grade Cloud Solution ("Cloud as a
-                  Service") Azure@Shell that focuses on creating a landing zone
-                  to the Shell Internal Businesses, by providing Azure
-                  Subscriptions and maintaining it throughout its lifecycle.
+                  Built an Enterprise Grade Cloud Solution (Cloud as a Service)
+                  Azure@Shell that focuses on creating a landing zone to the
+                  Shell Internal Businesses, by providing Azure Subscriptions
+                  and maintaining it throughout its lifecycle.
                 </li>
                 <li>
                   Authored multiple Azure Policies to maintain Cloud Security

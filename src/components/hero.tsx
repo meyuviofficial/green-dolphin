@@ -31,7 +31,7 @@ export default function Hero() {
         </Avatar>
       </div>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-widest lg:text-5xl pt-8">
-        HELLO, I'M YUVI !
+        HELLO, I AM YUVI !
       </h1>
       <div className="max-w-full mx-96 mt-8">
         <p className="leading-7 [&:not(:first-child)]:mt-6 tracking-wide">
