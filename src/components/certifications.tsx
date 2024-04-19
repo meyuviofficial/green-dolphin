@@ -83,7 +83,7 @@ export default function Certifications() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Badge variant="default">Kubernetes</Badge>
+              <Badge variant="default">Azure</Badge>
             </CardFooter>
           </Card>
         </div>
@@ -115,7 +115,7 @@ export default function Certifications() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Badge variant="default">Kubernetes</Badge>
+              <Badge variant="default">Azure</Badge>
             </CardFooter>
           </Card>
         </div>

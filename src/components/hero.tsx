@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div
-      id="hero"
+      id=""
       className="flex flex-col min-h-screen items-center justify-center bg-yellow-400 ..."
     >
       {/* <Image
