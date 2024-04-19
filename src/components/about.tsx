@@ -7,6 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "./ui/button";
+import { BiSolidDownArrow, BiSolidDownArrowCircle } from "react-icons/bi";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -152,6 +155,13 @@ export default function About() {
             </CardFooter>
           </Card>
         </div>
+      </div>
+      <div>
+        <Button asChild variant={"ghost"} className="mt-8 rounded-full">
+          <Link href="#skills">
+            <BiSolidDownArrowCircle className="w-12 h-12 px-2" />
+          </Link>
+        </Button>
       </div>
     </div>
   );

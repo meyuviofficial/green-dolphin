@@ -9,6 +9,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { SiLinuxfoundation } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { BiSolidUpArrowCircle } from "react-icons/bi";
 
 export default function Certifications() {
   return (
@@ -119,6 +122,13 @@ export default function Certifications() {
             </CardFooter>
           </Card>
         </div>
+      </div>
+      <div>
+        <Button asChild variant={"ghost"} className="mt-8 rounded-full">
+          <Link href="#">
+            <BiSolidUpArrowCircle className="w-12 h-12 px-2" />
+          </Link>
+        </Button>
       </div>
     </div>
   );

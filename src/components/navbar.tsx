@@ -12,13 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsMedium,
-  BsTwitch,
-  BsTwitterX,
-} from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { ThemeToggler } from "./theme-toggler";
 import { CgWebsite } from "react-icons/cg";
 

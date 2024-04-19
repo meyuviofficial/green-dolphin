@@ -1,4 +1,8 @@
-import { BiLogoGoLang, BiWindows } from "react-icons/bi";
+import {
+  BiLogoGoLang,
+  BiSolidDownArrowCircle,
+  BiWindows,
+} from "react-icons/bi";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 import { FaAws, FaDocker, FaPython } from "react-icons/fa6";
@@ -17,6 +21,8 @@ import { LiaLinux } from "react-icons/lia";
 import { DiAws, DiDocker, DiTerminal, DiWindows } from "react-icons/di";
 import { ShellIcon } from "lucide-react";
 import { VscAzure } from "react-icons/vsc";
+import { Button } from "./ui/button";
+import Link from "next/link";
 export default function Skills() {
   return (
     <div
@@ -97,6 +103,13 @@ export default function Skills() {
         <div className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center hover:drop-shadow-2xl hover:bg-red-200">
           <VscAzure className="w-24 h-24 p-4" style={{ color: "#f87171" }} />
         </div>
+      </div>
+      <div>
+        <Button asChild variant={"ghost"} className="mt-8 rounded-full">
+          <Link href="#certifications">
+            <BiSolidDownArrowCircle className="w-12 h-12 px-2" />
+          </Link>
+        </Button>
       </div>
     </div>
   );

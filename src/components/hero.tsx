@@ -3,6 +3,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  BiDownArrow,
+  BiDownArrowCircle,
+  BiSolidDownArrowCircle,
+} from "react-icons/bi";
 
 // bg-yellow-400 - for bg
 export default function Hero() {
@@ -19,7 +24,7 @@ export default function Hero() {
         quality={100}
         className="z-[-1] brightness-50 blur-sm"
       /> */}
-      <div className="rounded-full w-36 h-36 bg-zinc-900 flex items-center justify-center drop-shadow-lg hover:drop-shadow-2xl">
+      <div className="rounded-full w-36 h-36 bg-zinc-900 flex items-center justify-center hover:drop-shadow-2xl">
         <Avatar className="w-32 h-32">
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
@@ -39,12 +44,10 @@ export default function Hero() {
         </p>
       </div>
       <div>
-        <Button
-          asChild
-          variant={"destructive"}
-          className="mt-8 rounded-full shadow-xl"
-        >
-          <Link href="#about">More</Link>
+        <Button asChild variant={"ghost"} className="mt-8 rounded-full">
+          <Link href="#about">
+            <BiSolidDownArrowCircle className="w-12 h-12 px-2" />
+          </Link>
         </Button>
       </div>
     </div>
