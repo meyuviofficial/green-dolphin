@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import About from "@/components/about";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="grid grid-flow-row">
         <Hero />
         <About />
+        <Skills />
       </div>
     </main>
   );
