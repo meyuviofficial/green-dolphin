@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { inter } from "./layout";
+import { inter } from "@/components/utils/fonts";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+    <html lang="en">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
