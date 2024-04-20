@@ -2,12 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
-import {
-  BiDownArrow,
-  BiDownArrowCircle,
-  BiSolidDownArrowCircle,
-} from "react-icons/bi";
+import { BiSolidDownArrowCircle } from "react-icons/bi";
 
 // bg-yellow-400 - for bg
 export default function Hero() {
