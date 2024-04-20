@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { inter } from "./layout";
+import { inter } from "@/components/utils/fonts";
 
 export default function RootLayout({
   children,
