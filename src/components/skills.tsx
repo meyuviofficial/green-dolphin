@@ -2,6 +2,12 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import skills_data from "@/data/skills-data";
 import { BiSolidDownArrowCircle } from "react-icons/bi";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Skills() {
   return (
@@ -18,12 +24,19 @@ export default function Skills() {
       </p>
       <div className="grid grid-cols-4 gap-4 justify-center items-center mx-auto px-4 py-8">
         {skills_data.map((skill, index) => (
-          <div
-            key={index}
-            className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center hover:drop-shadow-2xl hover:bg-red-200"
-          >
-            {skill.icon}
-          </div>
+          <TooltipProvider>
+            <Tooltip>
+              <div
+                key={index}
+                className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center hover:drop-shadow-2xl hover:bg-red-200"
+              >
+                <TooltipTrigger>{skill.icon}</TooltipTrigger>
+                <TooltipContent>
+                  <p>{skill.name}</p>
+                </TooltipContent>
+              </div>
+            </Tooltip>
+          </TooltipProvider>
         ))}
       </div>
       <div>
