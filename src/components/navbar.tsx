@@ -69,7 +69,7 @@ export function NavBar() {
       <div className="flex flex-wrap justify-between flex-col items-start">
         <NavigationMenu>
           {social_media_links.map((link, index) => (
-            <NavigationMenuList>
+            <NavigationMenuList key={index}>
               <NavigationMenuItem key={index}>
                 <Link href={link.url} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -84,7 +84,7 @@ export function NavBar() {
       <div className="flex flex-col items-end">
         <NavigationMenu>
           {links.map((link, index) => (
-            <NavigationMenuList>
+            <NavigationMenuList key={index}>
               <NavigationMenuItem key={index}>
                 <Link href={link.url} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
