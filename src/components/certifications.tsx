@@ -7,11 +7,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SiLinuxfoundation } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { BiSolidUpArrowCircle } from "react-icons/bi";
+
+import cert_data from "@/data/cert-data";
 
 export default function Certifications() {
   return (
@@ -27,101 +27,33 @@ export default function Certifications() {
         !!
       </p>
       <div className="grid grid-cols-1 auto-rows-max md:grid-cols-3 gap-8 px-48 min-h-max">
-        <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
-            <CardHeader>
-              <CardTitle className="font-bold tracking-wider text-center hover:text-sky-600">
-                Certified Kubernetes Application Developer (CKAD)
-              </CardTitle>
-              <CardDescription className="font-semibold tracking-wider text-center">
-                Linux Foundations, JUN 2023
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="w-full flex flex-col items-center">
-              <SiLinuxfoundation className="w-16 h-16 self-center" />
-              <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                <li>
-                  This certification is for Kubernetes engineers, cloud
-                  engineers and other IT professionals responsible for building,
-                  deploying, and configuring cloud native applications with
-                  Kubernetes.
-                </li>
-                <li>
-                  CKAD has been developed by The Linux Foundation and the Cloud
-                  Native Computing Foundation (CNCF), to help expand the
-                  Kubernetes ecosystem through standardized training and
-                  certification.
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Badge variant="default">Kubernetes</Badge>
-            </CardFooter>
-          </Card>
-        </div>
-        <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
-            <CardHeader>
-              <CardTitle className="font-bold tracking-wider text-center hover:text-sky-600">
-                Microsoft Azure Developer Associate (AZ - 204)
-              </CardTitle>
-              <CardDescription className="font-semibold tracking-wider text-center">
-                Microsoft Azure, Jan 2022
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="w-full flex flex-col items-center">
-              <VscAzure className="w-16 h-16 self-center" />
-              <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                <li>
-                  This certification tests your proficiency all phases of
-                  development, including requirements gathering, design,
-                  development, deployment, security, maintenance, performance
-                  tuning, and monitoring.
-                </li>
-                <li>
-                  It focusses on the development of Azure compute solutions,
-                  Azure storage, PaaS solutions, Azure security, and Azure
-                  monitoring.
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Badge variant="default">Azure</Badge>
-            </CardFooter>
-          </Card>
-        </div>
-        <div>
-          <Card className="drop-shadow-lg hover:drop-shadow-2xl">
-            <CardHeader>
-              <CardTitle className="font-bold tracking-wider text-center hover:text-sky-600">
-                Microsoft Azure Fundamentals (Az-900)
-              </CardTitle>
-              <CardDescription className="font-semibold tracking-wider text-center">
-                Microsoft Azure, Jan 2022
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="w-full flex flex-col items-center">
-              <VscAzure className="w-16 h-16 self-center" />
-              <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                <li>
-                  This certification tests your foundational knowledge of cloud
-                  concepts in general and Microsoft Azure in particular. This
-                  certification is a common starting point in a journey towards
-                  a career in Azure.
-                </li>
-                <li>
-                  It focusses on your knowledge on Cloud concepts of Azure like
-                  Networking, Compute and Storage. It also focusses on key areas
-                  like Infrastructure management, Database Management and
-                  Software Development.
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Badge variant="default">Azure</Badge>
-            </CardFooter>
-          </Card>
-        </div>
+        {cert_data.map((card, index) => (
+          <div key={index}>
+            <Card className="hover:drop-shadow-2xl">
+              <CardHeader>
+                <CardTitle className="font-bold tracking-wider text-center hover:text-sky-600">
+                  {card.header}
+                </CardTitle>
+                <CardDescription className="font-semibold tracking-wider text-center">
+                  {card.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="w-full flex flex-col items-center">
+                {card.icon}
+                <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+                  {card.content.map((content, i) => (
+                    <li key={i}>{content}</li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Badge variant="default" key={index}>
+                  {card.footer}
+                </Badge>
+              </CardFooter>
+            </Card>
+          </div>
+        ))}
       </div>
       <div>
         <Button asChild variant={"ghost"} className="mt-8 rounded-full">
