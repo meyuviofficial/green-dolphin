@@ -94,6 +94,11 @@ export function NavBar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           ))}
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <ThemeToggler />
+            </NavigationMenuItem>
+          </NavigationMenuList>
         </NavigationMenu>
       </div>
     </div>
