@@ -23,6 +23,7 @@ import { ShellIcon } from "lucide-react";
 import { VscAzure } from "react-icons/vsc";
 import { Button } from "./ui/button";
 import Link from "next/link";
+
 export default function Skills() {
   return (
     <div
