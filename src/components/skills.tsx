@@ -24,14 +24,14 @@ export default function Skills() {
       </p>
       <div className="grid grid-cols-4 gap-4 justify-center items-center mx-auto px-4 py-8">
         {skills_data.map((skill, index) => (
-          <TooltipProvider>
+          <TooltipProvider key={index}>
             <Tooltip>
               <div
                 key={index}
                 className="w-full h-full rounded-full bg-zinc-800 flex justify-center items-center hover:drop-shadow-2xl hover:bg-red-200"
               >
-                <TooltipTrigger>{skill.icon}</TooltipTrigger>
-                <TooltipContent>
+                <TooltipTrigger key={index}>{skill.icon}</TooltipTrigger>
+                <TooltipContent key={index}>
                   <p>{skill.name}</p>
                 </TooltipContent>
               </div>
