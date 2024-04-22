@@ -27,7 +27,7 @@ export default function About() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-48">
         {card_data.map((card, index) => (
-          <div key={index}>
+          <div key={index} className="flex">
             <Card className="hover:drop-shadow-2xl">
               <CardHeader>
                 <CardTitle className="font-bold tracking-wider text-center hover:text-green-500">
@@ -45,11 +45,13 @@ export default function About() {
                 </ul>
               </CardContent>
               <CardFooter>
-                {card.footer.map((footer) => (
-                  <Badge variant="default" key={index}>
-                    {footer}
-                  </Badge>
-                ))}
+                <div className="w-full">
+                  {card.footer.map((footer) => (
+                    <Badge variant="default" key={index}>
+                      {footer}
+                    </Badge>
+                  ))}
+                </div>
               </CardFooter>
             </Card>
           </div>

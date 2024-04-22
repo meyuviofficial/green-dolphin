@@ -28,7 +28,7 @@ export default function Certifications() {
       </p>
       <div className="grid grid-cols-1 auto-rows-max md:grid-cols-3 gap-8 px-48 min-h-max">
         {cert_data.map((card, index) => (
-          <div key={index}>
+          <div key={index} className="flex">
             <Card className="hover:drop-shadow-2xl">
               <CardHeader>
                 <CardTitle className="font-bold tracking-wider text-center hover:text-sky-600">
