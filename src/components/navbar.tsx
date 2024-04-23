@@ -70,10 +70,13 @@ export function NavBar() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   {links.map((link, index) => (
-                    <ul className="flex w-screen px-4 justify-center items-center">
+                    <ul
+                      className="flex w-screen px-4 justify-center items-center"
+                      key={index}
+                    >
                       <li className="p-2">
                         <Link href={link.url} key={index} passHref>
-                          <NavigationMenuLink>{link.name}</NavigationMenuLink>
+                          <NavigationMenuLink >{link.name}</NavigationMenuLink>
                         </Link>
                       </li>
                     </ul>
