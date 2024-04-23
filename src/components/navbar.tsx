@@ -60,7 +60,7 @@ export function NavBar() {
           </NavigationMenu>
         </div>
       </div>
-      <div className="md:hidden fixed top-0 w-screen p-2 bg-white dark:bg-black">
+      <div className="md:hidden fixed top-0 w-screen p-2 bg-white dark:bg-black z-10">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
