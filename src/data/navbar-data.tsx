@@ -1,19 +1,23 @@
 const links = [
   {
     name: "Home",
-    url: "#",
+    url: "/",
+  },
+  {
+    name: "Blogs",
+    url: "/blogs",
   },
   {
     name: "About",
-    url: "#about",
+    url: "/#about",
   },
   {
     name: "Skills",
-    url: "#skills",
+    url: "/#skills",
   },
   {
     name: "Certifications",
-    url: "#certifications",
+    url: "/#certifications",
   },
 ];
 
