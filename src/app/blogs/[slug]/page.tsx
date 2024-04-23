@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { formatDate, getBlogPosts } from "@/components/utils/mdx-utils";
 import { baseUrl } from "@/app/sitemap";
 import { NavBar } from "@/components/navbar";
+import Image from "next/image";
 export async function generateStaticParams() {
   let posts = getBlogPosts();
 
@@ -92,6 +93,15 @@ export default function Blog({ params }: { params: { slug: string } }) {
             <p className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
               {formatDate(post.metadata.publishedAt)}
             </p>
+          </div>
+          <div className="p-16 ">
+            <Image
+              src={post.metadata.image ?? ""}
+              alt={post.metadata.title}
+              width={96 * 16}
+              height={96 * (9 / 16)}
+              className="rounded-lg"
+            />
           </div>
           <div className="">
             {/* <Image src={post.metadata.image} alt={post.metadata.title} /> */}

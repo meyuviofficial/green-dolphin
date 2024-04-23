@@ -7,6 +7,7 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         hostname: "images.unsplash.com",

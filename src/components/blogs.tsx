@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Car } from "lucide-react";
@@ -50,7 +51,18 @@ export default function Blogs() {
                     {post.metadata.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>{post.metadata.summary}</CardContent>
+                <CardContent className="flex flex-col justify-center items-center">
+                  <div className="py-4">
+                    <Image
+                      src={post.metadata.image ?? ""}
+                      alt={post.metadata.title}
+                      width={96 * 16}
+                      height={96 * (9 / 16)}
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <div>{post.metadata.summary}</div>
+                </CardContent>
                 <CardFooter>
                   <div className="w-full">{post.metadata.publishedAt}</div>
                 </CardFooter>
