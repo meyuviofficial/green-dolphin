@@ -12,57 +12,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { BsGithub, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { ThemeToggler } from "./theme-toggler";
-import { CgWebsite } from "react-icons/cg";
-
-const links = [
-  {
-    name: "Home",
-    url: "#",
-  },
-  {
-    name: "About",
-    url: "#about",
-  },
-  {
-    name: "Skills",
-    url: "#skills",
-  },
-  {
-    name: "Certifications",
-    url: "#certifications",
-  },
-];
-
-const social_media_links = [
-  {
-    name: "GitHub",
-    url: "",
-    icon: <BsGithub className="w-6 h-6" />,
-  },
-  {
-    name: "LinkedIn",
-    url: "",
-    icon: <BsLinkedin className="w-6 h-6" />,
-  },
-  {
-    name: "Medium",
-    url: "",
-    icon: <BsMedium className="w-6 h-6" />,
-  },
-  {
-    name: "Twitter",
-    url: "",
-    icon: <BsTwitterX className="w-6 h-6" />,
-  },
-  {
-    name: "Website",
-    url: "",
-    icon: <CgWebsite className="w-6 h-6" />,
-  },
-];
-
+import social_media_links from "@/data/socialmedia-data";
+import links from "@/data/navbar-data";
 export function NavBar() {
   return (
     <div className="bg-white dark:bg-black grid grid-flow-col fixed top-0 w-full p-2">
