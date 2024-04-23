@@ -76,11 +76,18 @@ export function NavBar() {
                     >
                       <li className="p-2">
                         <Link href={link.url} key={index} passHref>
-                          <NavigationMenuLink >{link.name}</NavigationMenuLink>
+                          <NavigationMenuLink>{link.name}</NavigationMenuLink>
                         </Link>
                       </li>
                     </ul>
                   ))}
+                  <div className="flex flex-row w-full p-4 justify-evenly items-center">
+                    {social_media_links.map((link, index) => (
+                      <Link href={link.url} key={index} passHref>
+                        <NavigationMenuLink>{link.icon}</NavigationMenuLink>
+                      </Link>
+                    ))}
+                  </div>
                 </NavigationMenuContent>
               </div>
             </NavigationMenuItem>
