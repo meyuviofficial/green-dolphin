@@ -88,13 +88,13 @@ export default function Blog({ params }: { params: { slug: string } }) {
         <h1 className="title font-bold text-4xl tracking-wider pt-12">
           {post.metadata.title}
         </h1>
-        <div className="w-3/5 flex px-16 flex-col justify-center items-center">
-          <div className="py-4">
+        <div className="md:w-3/5 w-screen flex md:px-16 px-4 flex-col justify-center items-center">
+          <div className="p-4">
             <p className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
               {formatDate(post.metadata.publishedAt)}
             </p>
           </div>
-          <div className="p-16 ">
+          <div className="md:p-16 p-2">
             <Image
               src={post.metadata.image ?? ""}
               alt={post.metadata.title}
