@@ -17,16 +17,16 @@ export default function Certifications() {
   return (
     <div
       id="certifications"
-      className="min-h-screen flex flex-col items-center px-4 py-16 bg-sky-400"
+      className="min-h-screen flex flex-col items-center px-4 py-16 bg-sky-400 w-screen md:w-full"
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest mx-96 mt-8 lg:text-5xl pt-8">
         CERTIFICATIONS
       </h1>
-      <p className="text-md leading-relaxed mb-6 tracking-wide w-2/5 pt-4 text-center">
+      <p className="text-md leading-relaxed mb-6 tracking-wide pt-4 text-center px-4">
         Certifications are very hard to obtain and good to flex. Here are some
         !!
       </p>
-      <div className="grid grid-cols-1 auto-rows-max md:grid-cols-3 gap-8 px-48 min-h-max">
+      <div className="grid grid-cols-1 auto-rows-max md:grid-cols-3 gap-8 md:px-48 min-h-max px-4">
         {cert_data.map((card, index) => (
           <div key={index} className="flex">
             <Card className="hover:drop-shadow-2xl">
@@ -38,7 +38,7 @@ export default function Certifications() {
                   {card.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="w-full flex flex-col items-center">
+              <CardContent className="flex flex-col items-center">
                 {card.icon}
                 <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                   {card.content.map((content, i) => (

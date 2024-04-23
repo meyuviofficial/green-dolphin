@@ -16,16 +16,16 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen flex flex-col items-center px-4 py-16 bg-green-400"
+      className="min-h-screen flex flex-col items-center px-4 py-16 bg-green-400 w-screen md:w-full"
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest mx-96 mt-8 lg:text-5xl pt-8">
         ABOUT ME
       </h1>
-      <p className="text-md leading-relaxed mb-6 tracking-wide w-2/5 pt-4">
+      <p className="text-md text-center leading-relaxed mb-6 tracking-wide w-full pt-4">
         Here you will find more information about me, what I do, and my current
         skills mostly in terms of programming and technology.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-48">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:px-48 px-4">
         {card_data.map((card, index) => (
           <div key={index} className="flex">
             <Card className="hover:drop-shadow-2xl">
