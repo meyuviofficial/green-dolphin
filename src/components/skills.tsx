@@ -18,7 +18,7 @@ export default function Skills() {
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest mx-96 mt-8 lg:text-5xl pt-8">
         SKILLS
       </h1>
-      <p className="text-sm md:text-md leading-relaxed mb-6 tracking-wide pt-4 mx-4">
+      <p className="text-sm md:text-md leading-relaxed mb-6 tracking-wide pt-4 mx-4 text-center">
         This section takes you through the list of skills that I possessed over
         the years
       </p>

@@ -18,12 +18,12 @@ export default function Blogs() {
   return (
     <div
       id="blogs"
-      className="min-h-screen flex flex-col items-center px-4 py-16 bg-fuchsia-400"
+      className="min-h-screen flex flex-col items-center px-4 py-16 bg-cyan-300"
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold text-center tracking-widest md:mx-96 mt-12 lg:text-5xl md:pt-8">
         BLOGS
       </h1>
-      <p className="text-md leading-relaxed mb-6 tracking-wide pt-4">
+      <p className="text-md text-center leading-relaxed mb-6 tracking-wide pt-4">
         Here you will find some of my blogs, mostly about technology and
         programming. I hope you find them useful.
       </p>

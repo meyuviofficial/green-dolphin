@@ -87,6 +87,7 @@ export function NavBar() {
                         <NavigationMenuLink>{link.icon}</NavigationMenuLink>
                       </Link>
                     ))}
+                    <ThemeToggler />
                   </div>
                 </NavigationMenuContent>
               </div>
