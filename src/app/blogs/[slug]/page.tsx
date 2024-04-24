@@ -3,6 +3,8 @@ import { formatDate, getBlogPosts } from "@/components/utils/mdx-utils";
 import { baseUrl } from "@/app/sitemap";
 import { NavBar } from "@/components/navbar";
 import Image from "next/image";
+import MDXStyling from "@/components/mdx-styling";
+
 export async function generateStaticParams() {
   let posts = getBlogPosts();
 
@@ -51,61 +53,36 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog({ params }: { params: { slug: string } }) {
   let post = getBlogPosts().find((post) => post.slug === params.slug);
-
-  if (!post) {
-    notFound();
-  }
-
+  let post_html = await MDXStyling(post?.content ?? "");
   return (
     <div>
       <NavBar />
 
-      <section className="min-h-screen flex flex-col items-center px-4 py-16 dark:bg-zinc-800  dark:text-white bg-neutral-50 text-zinc-800">
-        {/* <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
-            author: {
-              "@type": "Person",
-              name: "My Portfolio",
-            },
-          }),
-        }}
-      /> */}
+      <section className="min-h-screen flex flex-col items-center px-4 py-16 bg-cyan-300 dark:text-white text-zinc-800">
         <h1 className="title font-bold text-4xl tracking-wider pt-12">
-          {post.metadata.title}
+          {post?.metadata.title}
         </h1>
-        <div className="md:w-3/5 w-screen flex md:px-16 px-4 flex-col justify-center items-center">
-          <div className="p-4">
-            <p className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-              {formatDate(post.metadata.publishedAt)}
-            </p>
-          </div>
+        <div className="p-4">
+          <p className="text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+            {formatDate(post?.metadata?.publishedAt ?? "")}
+          </p>
+        </div>
+        <div className="md:w-3/5 w-screen flex md:px-16 px-4 flex-col justify-center items-center mt-4 md:mt-16 rounded-xl pb-16 hover:drop-shadow-lg bg-neutral-100 dark:bg-zinc-900">
           <div className="md:p-16 p-2">
             <Image
-              src={post.metadata.image ?? ""}
-              alt={post.metadata.title}
+              src={post?.metadata?.image ?? ""}
+              alt={post?.metadata?.title ?? ""}
               width={96 * 16}
               height={96 * (9 / 16)}
               className="rounded-lg"
             />
           </div>
           <div className="">
-            {/* <Image src={post.metadata.image} alt={post.metadata.title} /> */}
-            <article className="prose">{post.content}</article>
+            <article className="prose">
+              <div dangerouslySetInnerHTML={{ __html: post_html }}></div>
+            </article>
           </div>
         </div>
       </section>

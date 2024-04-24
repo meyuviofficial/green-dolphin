@@ -42,7 +42,7 @@ export default function Blogs() {
             <div key={index} className="flex">
               <Card className="hover:drop-shadow-2xl w-screen">
                 <CardHeader>
-                  <CardTitle className="font-bold tracking-wider text-center hover:text-green-500">
+                  <CardTitle className="font-bold tracking-wider text-center hover:text-cyan-400">
                     <Link href={`/blogs/${post.slug}`}>
                       {post.metadata.title}
                     </Link>
