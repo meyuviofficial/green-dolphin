@@ -60,7 +60,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
     <div>
       <NavBar />
 
-      <section className="min-h-screen flex flex-col items-center px-4 py-16 bg-cyan-300 dark:text-white text-zinc-800 w-screen md:w-full">
+      <section className="min-h-screen flex flex-col items-center px-4 py-16 bg-cyan-300 dark:text-white text-zinc-800">
         <h1 className="title font-bold text-4xl tracking-wider pt-12">
           {post?.metadata.title}
         </h1>
@@ -69,7 +69,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             {formatDate(post?.metadata?.publishedAt ?? "")}
           </p>
         </div>
-        <div className="flex md:px-16 px-4 flex-col justify-center items-center mt-4 md:mt-16 rounded-xl pb-16 hover:drop-shadow-lg bg-neutral-100 dark:bg-zinc-900">
+        <div className="flex md:px-16 px-4 flex-col justify-center items-center mt-4 md:mt-16 rounded-xl pb-16 hover:drop-shadow-lg bg-neutral-100 dark:bg-zinc-900 w-full md:w-4/6">
           <div className="md:p-16 p-4">
             <Image
               src={post?.metadata?.image ?? ""}
