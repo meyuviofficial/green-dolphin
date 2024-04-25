@@ -1,5 +1,4 @@
-import { BlogPosts } from "@/components/utils/blog-posts";
-import Blogs from "@/components/blogs";
+import BlogPosts from "@/components/blogposts";
 import { NavBar } from "@/components/navbar";
 export const metadata = {
   title: "Blog",
@@ -10,7 +9,7 @@ export default function Page() {
   return (
     <section>
       <NavBar />
-      <Blogs />
+      <BlogPosts />
     </section>
   );
 }
