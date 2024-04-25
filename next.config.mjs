@@ -1,5 +1,8 @@
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,8 +21,8 @@ const nextConfig = {
 
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm, remarkParse, remarkRehype],
+    rehypePlugins: [rehypeStringify],
   },
 });
 
